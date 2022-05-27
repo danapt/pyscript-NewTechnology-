@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+</head>
+
+<body>
+
+    <h1>My First PyScript Application</h1>
+    </br>
+
+    <!-- Here is the Python! -->
+    <py-script> print('Hello, World!') </py-script>
+
+
+    <py-script output-div="test_output-div"></py-script>
+    <py-script> print("This absolutly new! can't wait to see what this script can do! Will replace javaScript in time") </py-script>
+
+    
+    <py-env> 
+    	-numpy 
+    	-matplotlib 
+    </py-env>
+    <py-env> 
+    	-numpy 
+    	-matplotlib 
+    	-paths:
+    		-/utils.py
+    </py-env>
+
+     <py-env> 
+    	-numpy 
+    	-matplotlib 
+    	-myPanel!=0.13.1a
+    </py-env>
+
+    #generate a REPL Widget and Place on UI 
+    <py-repl id="my-repl" auto-generate="true"></py-repl>
+
+
+     #generate a REPL Widget and Place on UI with output / error Div
+    <py-repl id="my-repl" auto-generate="true" std-out="output" std-err="err-div"></py-repl>
+
+
+    
+
+</body>
+
+</html>

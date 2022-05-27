@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - numpy
+        - matplotlib
+    </py-env>
+</head>
+
+<body>
+
+	<py-script> print('This is a random point chart generator') </py-script>
+    <div id="scatter"></div>
+    <py-script output="scatter">
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randn(101)
+y = np.random.randn(101)
+#z = np.random.randn(101)
+
+fig, ax = plt.subplots()
+ax.scatter(x, y)
+#ax.scatter(x, y, z)
+fig
+    </py-script>
+
+</body>
+
+</html>

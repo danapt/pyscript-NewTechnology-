@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body>
+  <div>Type some sample input here</div>
+  <input type="text" id="test-input"/>
+  <button id="submit-button" type="submit" pys-onClick="show_input">OK</button>
+  <div id="test-output"></div>
+
+<py-script>
+from js import console
+
+def show_input(*args, **kwargs):   
+    text = Element('test-input').element.value
+    Element('test-output').element.innerText = text
+	
+</py-script>
+
+  </body>
+</html>
